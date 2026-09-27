@@ -1,16 +1,16 @@
 
-Hello this is my first my Github Action
+# Hello this is my first my Github Action
 
 on:
   push:
     branches:
       -main
 
-Jobs:
+jobs:
   hello:
     runs-on: ubuntu-latest
 
     steps:
-      -name: say hello
-       run: echo "Hello from github action!"
+      - name: say hello
+        run: echo "Hello from github action!"
 
