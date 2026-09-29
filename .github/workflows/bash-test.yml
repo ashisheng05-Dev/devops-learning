@@ -1,3 +1,20 @@
+# System Information Script.
 
-Hi
+on:
+    push:
+        branches:
+            - main
 
+jobs:
+    systeminfo:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Run system information script
+              run:  bash systeminfo.sh
+              
+
+                
