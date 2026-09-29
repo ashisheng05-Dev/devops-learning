@@ -1,20 +1,20 @@
-
-# This is a bash script to display the system informaion.
+name: Bash Script Test
 
 on:
   push:
     branches:
-        - main 
+      - main
 
 jobs:
   test:
-    runs-on: ubuntu-lates
-
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        users: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Run System Information Scrip
-        run: systeminfo.sh
+      - name: Run System Info Script
+        run: bash systeminfo.sh
 
+
+        
