@@ -4,15 +4,15 @@ on:
   push:
     branches:
       - main
-
-
 jobs:
-  details: check git version
+  test:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: run below script
+        
+      - name: Run assetdetails script
         run: bash assetdetails.sh
+          
+        
