@@ -1,0 +1,17 @@
+#This automation script to execute the asset details.
+
+on: [push]
+    branches:
+        - main
+
+job:
+    asset details:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Run Asset Details Script
+              run: bash assetdetails.sh
+              
