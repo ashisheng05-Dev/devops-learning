@@ -1,19 +1,18 @@
-# Asset Details Workflow
+# Script Information
 
 on:
   push:
     branches:
       - main
 
+
 jobs:
-  Asset_Details:
+  details: check git version
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Asset Details Script
-        run: bash assetdetails.sh 
-
-    
+      - name: run below script
+        run: bash assetdetails.sh
